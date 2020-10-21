@@ -12,7 +12,7 @@
         <mdb-card-text>
          <span>{{product.Location}}</span><br>
          <span>Available Qty: {{product.qty}}</span>
-         <img src="../../../assets/images/sold.jpg" height="50px" width="100px" *ngIf="product.qty == 0">
+         <img src="assets/images/sold.jpg" height="50px" width="100px" *ngIf="product.qty == 0">
         </mdb-card-text>
         <a *ngIf="product.qty > 0" (click)="addProductToCart(product)"  class="btn btn-sm" mdbBtn color="primary" mdbWavesEffect>Add to Cart</a>
       </mdb-card-body>
