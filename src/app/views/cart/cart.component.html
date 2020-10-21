@@ -1,0 +1,29 @@
+<div class="card">
+  <span class="header">Your Order Details</span>
+  <pre><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;From <span>Astodia, Ahmedabad</span></pre>
+<div class="cart-container">
+  <mat-list role="list" *ngFor="let cart of cartItems;let i = index;">
+    <mat-list-item role="listitem">
+      <div class="list-item">
+      <div class="row">
+        <div class="col-7"><span>{{cart.Name}}</span></div>
+        <div class="col-4 flex float-right" style="align-items: baseline;">
+          <i class="fa fa-trash pointer" matTooltip="Remove Selected Item"
+          (click)="deleteItem(i)"></i>
+          <span class="counter-style-small price-text">
+            <span class="ml-4 pointer" (click)="increDecreExtra('-', cart)">
+              <i class="fas fa-minus-circle"></i></span>
+              <span>{{ cart.cartQty }}</span>
+              <span class="pointer" (click)="increDecreExtra('+', cart)">
+             <i class="fas fa-plus-circle"></i></span>
+            </span><span class="ml-4">₹{{cart.price}}</span>
+
+        </div>
+      </div>
+    </div></mat-list-item>
+  </mat-list>
+</div>
+  <button type="button" mat-button class="btn" (click)="checkOut()">
+    CheckOut <span class="ml-5"> ₹ {{ totalPrice }}</span>
+  </button>
+</div>

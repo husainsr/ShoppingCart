@@ -1,0 +1,69 @@
+<header>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+  <mdb-navbar-brand><a class="navbar-brand"><strong style="color: white;">Shopping Cart</strong></a></mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="pizza-slice"></mdb-icon>
+          Products</a>
+      </li>
+      <li class="nav-item" (click)="openCart()">
+        <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="shopping-cart">
+        </mdb-icon> Cart<span class="sr-only">(current)</span>
+        <span>&nbsp;&nbsp;{{prodSer.cartProducts.length}}</span>
+      </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item" (click)="logout.show()">
+        <a class="nav-link waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="sign-out-alt"></mdb-icon>
+          Sign Out</a>
+      </li>
+
+
+    </ul>
+  </links>
+</mdb-navbar>
+
+</header>
+
+<main>
+  <div class="progressbar-container">
+    <mat-progress-bar mode="indeterminate" *ngIf="loadingIndicator"></mat-progress-bar>
+  </div>
+  <div class="animated fadeIn" [ngClass]="{'disable-ui' : loadingIndicator === true}">
+    <router-outlet></router-outlet>
+  </div>
+  <div *ngIf="loadingIndicator" class="text-center">
+    <b>Please wait...</b>
+  </div>
+</main>
+
+
+
+
+
+
+<div mdbModal #logout="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="heading lead">Do you want to logout ?</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="logout.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <button mdbBtn class="btn btn-sm float-right" type="button" color="info" outline="true" mdbWavesEffect (click)="logout.hide()">No</button>
+          <button mdbBtn class="btn btn-sm float-right" type="button" color="danger" outline="true" mdbWavesEffect (click)="logOut()">Yes</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

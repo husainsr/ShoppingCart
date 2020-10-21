@@ -1,0 +1,50 @@
+<div>
+  <div class="content">
+    <div class="animated fadeInRight">
+   <div id="slideRight" class="text-center p-2">
+    <div class="my-card" style="background-color: snow;">
+      <div class="card-body">
+        <h4 class="card-title text-center">
+          <img class="logo-main" id="slide" src="assets/images/logo.png">
+        </h4>
+
+        <div class="text-center">
+          <h6>Hii ! Welcome </h6>
+        </div>
+        <br>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="card-text">
+
+          <div class="text-center">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your UserID</mat-label>
+              <input matInput formControlName="Email" autofocus="true" autocomplete="username">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter your Password</mat-label>
+              <input matInput='password' type="password" formControlName="Password" autocomplete="current-password">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Role</mat-label>
+              <mat-select formControlName="Role">
+              <mat-option value="patient">Patient</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div class="text-right pr-3">
+              <button mat-flat-button color="primary" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+  </div>
+
+
+  </div>
+</div>

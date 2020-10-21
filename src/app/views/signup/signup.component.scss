@@ -1,0 +1,79 @@
+
+
+.logo-main {
+  width: 180px;
+}
+
+.my-card {
+  border: 1px solid lightgray;
+}
+
+mat-form-field {
+  width: 90%;
+}
+
+img {
+  width: 30px;
+}
+
+.content {
+  width: calc(80vh) !important;;
+  height: calc(80vh) !important;
+  position: absolute; /*Can also be `fixed`*/
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.p-2 {
+  text-align: center !important;
+  padding: 30px !important;
+  margin-bottom: 10px !important;
+}
+
+#slide {
+  position: relative;
+  left: -1500px;
+  -webkit-animation: slide 2s forwards;
+  animation: slide 2s forwards;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
+#slideRight {
+  position: relative;
+  right: -500px;
+  -webkit-animation: slideRight 1s forwards;
+  animation: slideRight 1s forwards;
+}
+
+@-webkit-keyframes slideRight {
+  100% { right: 0; }
+}
+
+@keyframes slideRight {
+  100% { right: 0; }
+}
+
+h5 {
+ font-weight: bold;
+ color: #2b579a;
+}
+
+.register {
+  cursor: pointer;
+  box-shadow: 0 10px 6px -6px #777;
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: 2px solid #2bbbad!important;
+  background-color: transparent!important;
+  font-weight: bold;
+}

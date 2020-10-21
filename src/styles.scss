@@ -1,0 +1,244 @@
+//Material-CDK
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import '~@mat-datetimepicker/core/datetimepicker/datetimepicker-theme.scss';
+
+.toolBar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 50px;
+  margin-right: 5px;
+}
+
+html {
+  background-color: white;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.card-name {
+  text-align: center;
+}
+
+.effect8 {
+  position: relative;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect10 {
+  position: relative;
+  box-shadow: 0 0 8px black, 0 0 0px 8px rgb(103, 137, 180) inset;
+  -moz-box-shadow: 0 0 8px black, 0 0 0px 8px rgb(103, 137, 180) inset;
+  -webkit-box-shadow: 0 0 8px black, 0 0 0px 8px rgb(103, 137, 180) inset;
+}
+
+.effect11 {
+  position: relative;
+  box-shadow: 0 0 4px black, 0 0 0px 4px rgb(103, 137, 180) inset;
+  -moz-box-shadow: 0 0 4px black, 0 0 0px 4px rgb(103, 137, 180) inset;
+  -webkit-box-shadow: 0 0 4px black, 0 0 0px 4px rgb(103, 137, 180) inset;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(77, 128, 158);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: rgb(77, 128, 158);
+  -webkit-box-shadow: inset 0 0 6px rgb(77, 128, 158);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgb(77, 128, 158);
+}
+
+.dashboardTitle {
+  background-color: rgba(147, 129, 255, 0.2);
+  padding: 15px;
+  font-weight: bold;
+  color: rgb(53, 52, 85);
+}
+
+.h5-responsive {
+  font-size: 1.1rem !important;
+}
+
+.componentCenter {
+  position: fixed;
+  top: 350px;
+  left: 38%;
+  min-height: 350px;
+  min-width: 350px;
+}
+
+.fileInput {
+  button {
+    background-color: wheat;
+  }
+
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+@import '~@angular/material/theming';
+@include mat-core();
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-blue, A400);
+$candy-app-warn: mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+
+.progressbar-container {
+  height: 4px;
+  background-color: #2b579a;
+}
+
+
+.scrollbar {
+  margin-left: 30px;
+  float: left;
+  height: 300px;
+  width: 65px;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: darkgray;
+}
+
+.force-overflow {
+  min-height: 450px;
+}
+
+.hideSearchPanel {
+  display: none;
+  animation: slowOut 250ms ease-out both;
+}
+
+@keyframes slowOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+mat-form-field {
+  font-size: 12px;
+}
+
+.searchPanel {
+  font-size: 0.8rem;
+}
+
+.flex_{
+  display: flex;
+  flex-direction: column;
+}
+
+.component-title {
+  padding: 75px 0.5rem 0.5rem 1.5rem !important;
+  background: linear-gradient(#EEEEEE, rgb(215, 223, 245));
+}
+
+.component-title-text {
+  color: #3F51B5;
+  font-weight: 200;
+}
+
+.logoutDialog {
+  .mat-dialog-container {
+    padding: 0px !important;
+  }
+}
+
+.stageDialog{
+  margin: 0px !important;
+  .mat-dialog-content{
+    margin: 0px !important;
+  }
+}
+
+.common-header{
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 2px;
+  height: 50px;
+  color: rgb(88, 84, 84);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+// Side Panel at Right -- Start
+.side-panel-right {
+  .mat-dialog-container {
+    margin: 10px 10px 10px 10px !important;
+    padding: 2px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  box-shadow: 0 0 4px black, 0 0 0px 4px rgb(103, 137, 180) inset;
+  -moz-box-shadow: 0 0 4px black, 0 0 0px 4px rgb(103, 137, 180) inset;
+  -webkit-box-shadow: 0 0 4px black, 0 0 0px 4px rgb(103, 137, 180) inset;
+  }
+
+  // .mat-dialog-content {
+  //   max-height: 90vh;
+  // }
+}
+
+.mat-trans-selec {
+  .mat-dialog-container {
+    margin: 70px 20px !important;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .cdk-overlay-pane{
+    width: 90%;
+  }
+}

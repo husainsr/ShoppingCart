@@ -1,0 +1,13 @@
+.navbar-brand {
+  cursor: pointer;
+}
+
+
+.my-bg {
+  background-image: url('../../../assets/images/gr.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(90vh) !important;
+  overflow-y: hidden;
+}
